@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <circle cx="150" cy="150" r="140" fill="#2e7d32"/>
+
+  <!-- Wallet -->
+  <rect x="70" y="105" width="160" height="105" rx="15" fill="white"/>
+  <rect x="95" y="85" width="110" height="35" rx="8" fill="#81c784"/>
+
+  <!-- Money -->
+  <circle cx="175" cy="155" r="28" fill="#2e7d32"/>
+  <text x="175" y="165"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="30"
+        font-weight="bold"
+        fill="white">$</text>
+
+  <!-- Hand / Cursor -->
+  <path d="M85 205
+           L85 165
+           C85 157 95 154 99 161
+           L99 180
+           L108 145
+           C110 137 121 138 122 147
+           L119 177
+           L128 150
+           C131 142 142 145 142 153
+           L137 180
+           L146 158
+           C149 151 160 155 158 163
+           L150 190
+           C146 204 135 215 120 218
+           L105 218
+           C94 218 85 213 85 205 Z"
+        fill="#f4b183"/>
+
+  <!-- Small text -->
+  <text x="150" y="260"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="24"
+        font-weight="bold"
+        fill="white">BUDGET</text>
+</svg>

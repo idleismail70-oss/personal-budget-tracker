@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Budget Tracker</title>
-
-    <!-- Link CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header id="page-header">
 
-        <!-- Budget Tracker Logo -->
         <img
-            src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
-            alt="Budget Tracker Logo"
-            width="70"
-        >
+         src="budget-icon.svg" alt="Budget Tracker logo" width="60">
+        
 
         <h1>My Budget Tracker</h1>
         <p>Track your income and expenses in one place.</p>
@@ -28,7 +22,7 @@
     <main>
 
         <!-- Add Expense Section -->
-        <section class="expense-section">
+        <div class="add-expense-section">
 
             <h2>Add Expense</h2>
 
@@ -38,49 +32,46 @@
                 <input
                     type="text"
                     id="expense-name"
-                    name="expense-name"
-                    placeholder="e.g. Lunch"
+                    placeholder="Expense name"
                 >
 
                 <label for="expense-amount">Amount</label>
                 <input
                     type="number"
                     id="expense-amount"
-                    name="expense-amount"
-                    placeholder="e.g. 500"
+                    placeholder="Amount"
                 >
 
                 <label for="expense-category">Category</label>
-                <select
-                    id="expense-category"
-                    name="expense-category"
-                >
-                    <option value="Food">Food</option>
-                    <option value="Transport">Transport</option>
-                    <option value="Rent">Rent</option>
-                    <option value="Entertainment">Entertainment</option>
-                    <option value="Other">Other</option>
+                <select id="expense-category">
+
+                    <option value="food">Food</option>
+                    <option value="transport">Transport</option>
+                    <option value="rent">Rent</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="other">Other</option>
+
                 </select>
 
                 <label for="expense-date">Date</label>
                 <input
                     type="date"
                     id="expense-date"
-                    name="expense-date"
                 >
 
-                <button type="button">Add Expense</button>
+                <button type="button" id="add-expense-btn">
+                    Add Expense
+                </button>
 
             </form>
 
-        </section>
+        </div>
 
         <!-- Your Expenses Section -->
-        <section id="expenses-list" class="expenses-section">
+        <div class="expenses-section" id="expense-list">
 
             <h2>Your Expenses</h2>
 
-            <!-- Expense Table -->
             <table>
 
                 <thead>
@@ -95,47 +86,47 @@
                 <tbody>
 
                     <tr>
-                        <td>Lunch</td>
-                        <td>KSh 500</td>
+                        <td>Groceries</td>
+                        <td>$45.00</td>
                         <td>Food</td>
-                        <td>2026-08-20</td>
+                        <td>2026-06-20</td>
                     </tr>
 
                     <tr>
                         <td>Bus Fare</td>
-                        <td>KSh 300</td>
+                        <td>$5.00</td>
                         <td>Transport</td>
-                        <td>2026-08-21</td>
+                        <td>2026-06-21</td>
                     </tr>
 
                     <tr>
-                        <td>House Rent</td>
-                        <td>KSh 8,000</td>
-                        <td>Rent</td>
-                        <td>2026-08-22</td>
-                    </tr>
-
-                    <tr>
-                        <td>Movie</td>
-                        <td>KSh 700</td>
+                        <td>Netflix</td>
+                        <td>$12.00</td>
                         <td>Entertainment</td>
-                        <td>2026-08-23</td>
+                        <td>2026-06-22</td>
                     </tr>
 
                     <tr>
-                        <td>Phone Credit</td>
-                        <td>KSh 200</td>
-                        <td>Other</td>
-                        <td>2026-08-24</td>
+                        <td>Rent</td>
+                        <td>$300.00</td>
+                        <td>Rent</td>
+                        <td>2026-06-01</td>
+                    </tr>
+
+                    <tr>
+                        <td>Coffee</td>
+                        <td>$3.50</td>
+                        <td>Food</td>
+                        <td>2026-06-23</td>
                     </tr>
 
                 </tbody>
 
             </table>
 
-        </section>
+        </div>
 
-        <!-- Budgeting Video -->
+        <!-- Multimedia -->
         <section class="video-section">
 
             <h2>Budgeting Tips</h2>
@@ -144,14 +135,14 @@
                 width="560"
                 height="315"
                 src="https://www.youtube.com/embed/pF8J4rfexW0"
-                title="Beginners Guide to Budgeting"
+                title="Budgeting tips for beginners"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
 
         </section>
 
-        <!-- How to Use Tracker -->
+        <!-- Interactive Element -->
         <section class="instructions">
 
             <details>
@@ -159,10 +150,9 @@
                 <summary>How to use this tracker</summary>
 
                 <p>
-                    Enter the expense name, amount, category, and date.
-                    Select the appropriate category from the dropdown
-                    and click the Add Expense button. JavaScript
-                    functionality will be added in a future week.
+                    Fill in the expense name, enter the amount,
+                    choose a category from the dropdown,
+                    then click "Add Expense" to record it.
                 </p>
 
             </details>

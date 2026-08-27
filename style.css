@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -13,7 +17,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Logo */
 #page-header img {
     display: block;
     margin: 0 auto 10px;
@@ -23,108 +26,110 @@ h1 {
     margin-bottom: 10px;
 }
 
-.expense-section {
+/* Add Expense Section */
+.add-expense-section {
     background-color: white;
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 8px;
 }
 
-/* Form */
-.expense-section form {
+.add-expense-section form {
     max-width: 500px;
 }
 
 /* Direct child selector */
-.expense-section > form {
-    display: block;
+.add-expense-section > form {
+    width: 100%;
 }
 
-input,
-select {
+.add-expense-section input,
+.add-expense-section select {
     display: block;
-    width: 95%;
+    width: 100%;
+    margin-bottom: 10px;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Focus pseudo-class */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2e7d32;
 }
 
 /* Negation pseudo-class */
 input:not([type="submit"]) {
-    box-sizing: border-box;
-}
-
-/* Focus state */
-input:focus,
-select:focus {
-    outline: none;
-    border: 2px solid #3498db;
+    background-color: #fafafa;
 }
 
 label {
     font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
-/* Add Expense button */
+/* Button */
 button {
-    background-color: #3498db;
+    cursor: pointer;
+    background-color: #2e7d32;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-
-    /* Required pointer cursor */
-    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #1b5e20;
 }
 
-/* Expenses table */
-#expenses-list {
+/* Expenses Section */
+.expenses-section {
     background-color: #e8f5e9;
     padding: 25px;
     border-radius: 8px;
+    margin-bottom: 20px;
 }
 
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
 }
 
-/* Descendant selector */
-.expenses-section th,
-.expenses-section td {
-    border: 1px solid #ccc;
+th {
+    background-color: #2e7d32;
+    color: white;
     padding: 12px;
     text-align: left;
 }
 
-/* Colored header row */
-.expenses-section th {
-    background-color: #2c3e50;
-    color: white;
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
 }
 
-/* Alternating row colors */
-.expenses-section tr:nth-child(even) {
-    background-color: #f2f2f2;
+/* Descendant selector */
+.expenses-section td {
+    font-size: 14px;
 }
 
-/* Hover effect */
-.expenses-section tbody tr:hover {
-    background-color: #d6eaf8;
+/* Position pseudo-class */
+tr:nth-child(even) {
+    background-color: #f5f5f5;
 }
 
-/* Video section */
+/* Hover pseudo-class */
+tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* Video */
 .video-section {
     background-color: white;
     padding: 25px;
-    margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     text-align: center;
@@ -134,11 +139,10 @@ iframe {
     max-width: 100%;
 }
 
-/* How to use section */
+/* Details */
 .instructions {
     background-color: white;
     padding: 20px;
-    margin-top: 20px;
     border-radius: 8px;
 }
 
