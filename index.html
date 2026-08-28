@@ -6,13 +6,16 @@
     <title>My Budget Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header id="page-header">
 
         <img
-         src="budget-icon.svg" alt="Budget Tracker logo" width="60">
-        
+            src="budget-icon.svg"
+            alt="Budget Tracker logo"
+            width="60"
+        >
 
         <h1>My Budget Tracker</h1>
         <p>Track your income and expenses in one place.</p>
@@ -22,7 +25,7 @@
     <main>
 
         <!-- Add Expense Section -->
-        <div class="add-expense-section">
+        <section class="add-expense-section">
 
             <h2>Add Expense</h2>
 
@@ -43,14 +46,13 @@
                 >
 
                 <label for="expense-category">Category</label>
-                <select id="expense-category">
 
+                <select id="expense-category">
                     <option value="food">Food</option>
                     <option value="transport">Transport</option>
                     <option value="rent">Rent</option>
                     <option value="entertainment">Entertainment</option>
                     <option value="other">Other</option>
-
                 </select>
 
                 <label for="expense-date">Date</label>
@@ -65,10 +67,10 @@
 
             </form>
 
-        </div>
+        </section>
 
         <!-- Your Expenses Section -->
-        <div class="expenses-section" id="expense-list">
+        <section class="expenses-section" id="expense-list">
 
             <h2>Your Expenses</h2>
 
@@ -124,9 +126,9 @@
 
             </table>
 
-        </div>
+        </section>
 
-        <!-- Multimedia -->
+        <!-- Multimedia Section -->
         <section class="video-section">
 
             <h2>Budgeting Tips</h2>
@@ -142,7 +144,7 @@
 
         </section>
 
-        <!-- Interactive Element -->
+        <!-- Interactive Section -->
         <section class="instructions">
 
             <details>
@@ -152,7 +154,8 @@
                 <p>
                     Fill in the expense name, enter the amount,
                     choose a category from the dropdown,
-                    then click "Add Expense" to record it.
+                    select the date, then click "Add Expense"
+                    to record it.
                 </p>
 
             </details>
