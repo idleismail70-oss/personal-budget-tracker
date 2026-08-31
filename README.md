@@ -252,6 +252,15 @@ Testing focused on:
 * General visual appearance
 
 Feedback was also requested from another person to review the dashboard and provide an outside perspective on the design and usability.
+### Feedback Received
+
+I asked another person to review the live SpendWise Dashboard.
+
+**Feedback:**
+
+> “Your project is good, and I like that you don't use too many colors.”
+
+The feedback was positive and highlighted the importance of keeping the dashboard's color palette simple and consistent.
 
 ### Feedback
 
