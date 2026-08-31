@@ -1,168 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Budget Tracker</title>
+
+    <title>SpendWise Dashboard</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header id="page-header">
+    <div class="dashboard">
 
-        <img
-            src="budget-icon.svg"
-            alt="Budget Tracker logo"
-            width="60"
-        >
+        <!-- =========================
+             SIDEBAR
+             ========================= -->
 
-        <h1>My Budget Tracker</h1>
-        <p>Track your income and expenses in one place.</p>
+        <aside class="sidebar">
 
-    </header>
+            <div class="brand">
 
-    <main>
-
-        <!-- Add Expense Section -->
-        <section class="add-expense-section">
-
-            <h2>Add Expense</h2>
-
-            <form>
-
-                <label for="expense-name">Expense Name</label>
-                <input
-                    type="text"
-                    id="expense-name"
-                    placeholder="Expense name"
+                <img
+                    src="budget-icon.svg"
+                    alt="SpendWise logo"
+                    width="45"
                 >
 
-                <label for="expense-amount">Amount</label>
-                <input
-                    type="number"
-                    id="expense-amount"
-                    placeholder="Amount"
-                >
+                <h1>SpendWise</h1>
 
-                <label for="expense-category">Category</label>
+            </div>
 
-                <select id="expense-category">
-                    <option value="food">Food</option>
-                    <option value="transport">Transport</option>
-                    <option value="rent">Rent</option>
-                    <option value="entertainment">Entertainment</option>
-                    <option value="other">Other</option>
-                </select>
 
-                <label for="expense-date">Date</label>
-                <input
-                    type="date"
-                    id="expense-date"
-                >
+            <nav class="sidebar-nav">
 
-                <button type="button" id="add-expense-btn">
-                    Add Expense
-                </button>
+                <a href="#" class="nav-item active">
+                    <span>📊</span>
+                    <span>Dashboard</span>
+                </a>
 
-            </form>
+                <a href="#" class="nav-item">
+                    <span>💳</span>
+                    <span>Expenses</span>
+                </a>
 
-        </section>
+                <a href="#" class="nav-item">
+                    <span>📁</span>
+                    <span>Categories</span>
+                </a>
 
-        <!-- Your Expenses Section -->
-        <section class="expenses-section" id="expense-list">
+                <a href="#" class="nav-item">
+                    <span>📈</span>
+                    <span>Reports</span>
+                </a>
 
-            <h2>Your Expenses</h2>
+                <a href="#" class="nav-item">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
 
-            <table>
+            </nav>
 
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Amount</th>
-                        <th>Category</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
+        </aside>
 
-                <tbody>
 
-                    <tr>
-                        <td>Groceries</td>
-                        <td>$45.00</td>
-                        <td>Food</td>
-                        <td>2026-06-20</td>
-                    </tr>
+        <!-- =========================
+             MAIN CONTENT
+             ========================= -->
 
-                    <tr>
-                        <td>Bus Fare</td>
-                        <td>$5.00</td>
-                        <td>Transport</td>
-                        <td>2026-06-21</td>
-                    </tr>
+        <main class="main-content">
 
-                    <tr>
-                        <td>Netflix</td>
-                        <td>$12.00</td>
-                        <td>Entertainment</td>
-                        <td>2026-06-22</td>
-                    </tr>
 
-                    <tr>
-                        <td>Rent</td>
-                        <td>$300.00</td>
-                        <td>Rent</td>
-                        <td>2026-06-01</td>
-                    </tr>
+            <!-- HEADER -->
 
-                    <tr>
-                        <td>Coffee</td>
-                        <td>$3.50</td>
-                        <td>Food</td>
-                        <td>2026-06-23</td>
-                    </tr>
+            <header class="dashboard-header">
 
-                </tbody>
+                <div class="header-text">
 
-            </table>
+                    <p class="welcome-text">
+                        Welcome back!
+                    </p>
 
-        </section>
+                    <h2>
+                        Financial Overview
+                    </h2>
 
-        <!-- Multimedia Section -->
-        <section class="video-section">
+                    <p>
+                        Here's a summary of your spending this month.
+                    </p>
 
-            <h2>Budgeting Tips</h2>
+                </div>
 
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/pF8J4rfexW0"
-                title="Budgeting tips for beginners"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
 
-        </section>
+                <div class="header-summary">
 
-        <!-- Interactive Section -->
-        <section class="instructions">
+                    <span>
+                        Total Balance
+                    </span>
 
-            <details>
+                    <strong>
+                        $2,450.00
+                    </strong>
 
-                <summary>How to use this tracker</summary>
+                </div>
 
-                <p>
-                    Fill in the expense name, enter the amount,
-                    choose a category from the dropdown,
-                    select the date, then click "Add Expense"
-                    to record it.
-                </p>
+            </header>
 
-            </details>
 
-        </section>
+            <!-- =========================
+                 SIX CATEGORY CARDS
+                 ========================= -->
 
-    </main>
+            <section class="categories">
+
+                <!-- Food -->
+
+                <div class="category-card" tabindex="0">
+
+                    <div class="card-icon">
+                        🍔
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>
+                            Food
+                        </h3>
+
+                        <p>
+                            Monthly spending
+                        </p>
+
+                        <strong>
+                            $320.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Transport -->
+
+                <div class="category-card" tabindex="0">
+
+                    <div class="card-icon">
+                        🚌
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>
+                            Transport
+                        </h3>
+
+                        <p>
+                            Monthly spending
+                        </p>
+
+                        <strong>
+                            $180.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Rent -->
+
+                <div class="category-card" tabindex="0">
+
+                    <div class="card-icon">
+                        🏠
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>
+                            Rent
+                        </h3>
+
+                        <p>
+                            Monthly spending
+                        </p>
+
+                        <strong>
+                            $750.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Entertainment -->
+
+                <div class="category-card" tabindex="0">
+
+                    <div class="card-icon">
+                        🎬
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>
+                            Entertainment
+                        </h3>
+
+                        <p>
+                            Monthly spending
+                        </p>
+
+                        <strong>
+                            $120.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Savings -->
+
+                <div class="category-card" tabindex="0">
+
+                    <div class="card-icon">
+                        💰
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>
+                            Savings
+                        </h3>
+
+                        <p>
+                            Monthly savings
+                        </p>
+
+                        <strong>
+                            $500.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Utilities -->
+
+                <div class="category-card" tabindex="0">
+
+                    <div class="card-icon">
+                        💡
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>
+                            Utilities
+                        </h3>
+
+                        <p>
+                            Monthly spending
+                        </p>
+
+                        <strong>
+                            $150.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 RECENT EXPENSES
+                 ========================= -->
+
+            <section class="recent-expenses">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Recent Expenses
+                    </h2>
+
+                    <span>
+                        August 2026
+                    </span>
+
+                </div>
+
+
+                <div class="expense-list">
+
+                    <div class="expense-item">
+
+                        <span>
+                            Groceries
+                        </span>
+
+                        <strong>
+                            $45.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="expense-item">
+
+                        <span>
+                            Bus Fare
+                        </span>
+
+                        <strong>
+                            $5.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="expense-item">
+
+                        <span>
+                            Netflix
+                        </span>
+
+                        <strong>
+                            $12.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 WEEK 3: BUDGETING TIPS
+                 ========================= -->
+
+            <section class="video-section">
+
+                <h2>
+                    Budgeting Tips
+                </h2>
+
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/pF8J4rfexW0"
+                    title="Budgeting tips for beginners"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+
+            </section>
+
+
+            <!-- =========================
+                 WEEK 3: INSTRUCTIONS
+                 ========================= -->
+
+            <section class="instructions">
+
+                <details>
+
+                    <summary>
+                        How to use this tracker
+                    </summary>
+
+                    <p>
+                        Fill in the expense name, enter the amount,
+                        choose a category from the dropdown,
+                        select the date, then click "Add Expense"
+                        to record it.
+                    </p>
+
+                </details>
+
+            </section>
+
+
+        </main>
+
+    </div>
 
 </body>
+
 </html>
