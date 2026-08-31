@@ -1,208 +1,321 @@
-/* Page styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+/* ==============================
+   GOOGLE FONTS
+   ============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
+
+/* ==============================
+   COLOR PALETTE
+   ============================== */
+
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #16a34a;
+    --background-color: #f1f5f9;
+    --card-color: #ffffff;
+    --text-color: #1e293b;
+    --muted-text: #64748b;
+    --border-color: #e2e8f0;
+    --table-row: #f8fafc;
 }
 
-/* Header */
+
+/* ==============================
+   GENERAL STYLES
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 30px 20px;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+   ============================== */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* ==============================
+   PAGE HEADER CARD
+   ============================== */
+
 #page-header {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    padding: 35px;
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
     text-align: center;
-    background-color: #2e7d32;
-    color: white;
-    padding: 25px;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 #page-header img {
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto 15px;
 }
 
-/* Main sections */
-main {
-    max-width: 900px;
-    margin: auto;
+#page-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 8px;
 }
 
-.add-expense-section,
-.expenses-section,
-.video-section,
-.instructions {
-    background-color: white;
-    padding: 20px;
+#page-header p {
+    color: var(--muted-text);
+    font-size: 1rem;
+}
+
+
+/* ==============================
+   SECTION HEADINGS
+   ============================== */
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    font-size: 1.4rem;
     margin-bottom: 20px;
-    border-radius: 8px;
 }
 
-/* Form */
+
+/* ==============================
+   ADD EXPENSE CARD
+   ============================== */
+
+.add-expense-section {
+    background-color: var(--card-color);
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+
+/* ==============================
+   FORM
+   ============================== */
+
 form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
 }
 
 form label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-color);
 }
 
 form input,
 form select {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    outline: none;
+    transition: 0.2s ease;
 }
 
-/* Input focus effect */
 form input:focus,
 form select:focus {
-    outline: none;
-    border: 2px solid #2e7d32;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-/* Add Expense button */
+
+/* ==============================
+   BUTTON
+   ============================== */
+
 #add-expense-btn {
-    padding: 12px;
-    margin-top: 10px;
-    background-color: #2e7d32;
-    color: white;
+    grid-column: 1 / -1;
+    padding: 13px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 #add-expense-btn:hover {
-    opacity: 0.85;
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
 }
 
-/* Expense table */
+
+/* ==============================
+   EXPENSE TABLE CARD
+   ============================== */
+
+.expenses-section {
+    background-color: var(--card-color);
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+
+/* ==============================
+   EXPENSE TABLE
+   ============================== */
+
 table {
     width: 100%;
     border-collapse: collapse;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
 }
 
-/* Table cells */
-th,
-td {
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: left;
-}
-
-/* Table header */
 thead {
-    background-color: #2e7d32;
+    background-color: var(--primary-color);
     color: white;
 }
 
-/* Alternating table rows */
+th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 14px 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* Alternating row colors */
+
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--table-row);
 }
 
-/* Table hover effect */
 tbody tr:hover {
-    background-color: #ddd;
+    background-color: #eff6ff;
 }
 
-/* Details */
-details {
-    padding: 10px;
+
+/* ==============================
+   MULTIMEDIA CARD
+   ============================== */
+
+.video-section {
+    background-color: var(--card-color);
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.video-section iframe {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+
+/* ==============================
+   INSTRUCTIONS CARD
+   ============================== */
+
+.instructions {
+    background-color: var(--card-color);
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 summary {
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 5px;
 }
 
-/* Video */
-.video-section iframe {
-    max-width: 100%;
+.instructions details p {
+    margin-top: 15px;
+    color: var(--muted-text);
 }
 
 
-/* Week 2 required selectors */
+/* ==============================
+   MOBILE RESPONSIVENESS
+   ============================== */
 
-/* Universal selector */
-* {
-    box-sizing: border-box;
-}
+@media (max-width: 700px) {
 
-/* Expense table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+    body {
+        padding: 20px 12px;
+    }
 
-th {
-    background-color: #2e7d32;
-    color: white;
-    padding: 12px;
-    text-align: left;
-}
+    #page-header {
+        padding: 25px 20px;
+    }
 
-td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-}
+    #page-header h1 {
+        font-size: 1.8rem;
+    }
 
-/* Alternating rows */
-tr:nth-child(even) {
-    background-color: #f5f5f5;
-}
+    .add-expense-section,
+    .expenses-section,
+    .video-section,
+    .instructions {
+        padding: 20px;
+    }
 
-/* Row hover */
-tr:hover {
-    background-color: #e8f5e9;
-}
+    form {
+        grid-template-columns: 1fr;
+    }
 
-/* Descendant selector */
-.expenses-section td {
-    font-size: 14px;
-}
+    #add-expense-btn {
+        grid-column: auto;
+    }
 
-/* Direct child selector */
-.add-expense-section > form {
-    width: 100%;
-}
+    table {
+        font-size: 0.85rem;
+    }
 
-/* Style form inputs and select */
-.add-expense-section input,
-.add-expense-section select {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
+    th,
+    td {
+        padding: 10px 8px;
+    }
 
-/* Focus effect */
-input:focus,
-select:focus {
-    outline: none;
-    border-color: #2e7d32;
-}
-
-/* :not() selector */
-input:not([type="submit"]) {
-    background-color: #fafafa;
-}
-
-/* Button */
-button {
-    cursor: pointer;
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-}
-
-/* Button hover */
-button:hover {
-    background-color: #1b5e20;
+    .video-section iframe {
+        height: 250px;
+    }
 }
