@@ -10,18 +10,18 @@
    ========================================= */
 
 :root {
-    --brand-color: #2563eb;
+    --brand: #2563eb;
     --brand-dark: #1d4ed8;
-    --accent-color: #16a34a;
+    --accent: #22c55e;
 
-    --background-color: #f1f5f9;
-    --surface-color: #ffffff;
+    --surface: #ffffff;
+    --background: #f5f7fb;
 
-    --text-primary: #1e293b;
+    --text: #1f2937;
     --text-secondary: #64748b;
 
-    --border-color: #e2e8f0;
-    --sidebar-color: #0f172a;
+    --border: #e2e8f0;
+    --sidebar: #0f172a;
 
     --shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
 }
@@ -44,8 +44,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-primary);
+    background: var(--background);
+    color: var(--text);
     line-height: 1.6;
 }
 
@@ -60,7 +60,7 @@ body {
 
     display: grid;
 
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 250px 1fr;
 }
 
 
@@ -70,7 +70,7 @@ body {
    ========================================= */
 
 .sidebar {
-    background-color: var(--sidebar-color);
+    background: var(--sidebar);
     color: white;
 
     padding: 25px 18px;
@@ -138,17 +138,17 @@ body {
 
 .nav-item:hover,
 .nav-item:focus {
-    background-color: #1e293b;
+    background: #1e293b;
     color: white;
 }
 
 .nav-item:focus-visible {
-    outline: 2px solid var(--brand-color);
+    outline: 2px solid var(--brand);
     outline-offset: 2px;
 }
 
 .nav-item.active {
-    background-color: var(--brand-color);
+    background: var(--brand);
     color: white;
 }
 
@@ -158,9 +158,8 @@ body {
    ========================================= */
 
 .main-content {
-    padding: 35px;
-
     min-width: 0;
+    padding: 35px;
 }
 
 
@@ -179,9 +178,9 @@ body {
     margin-bottom: 30px;
     padding: 25px;
 
-    background-color: var(--surface-color);
+    background: var(--surface);
 
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
     border-radius: 14px;
 
     box-shadow: var(--shadow);
@@ -196,7 +195,7 @@ body {
 }
 
 .welcome-text {
-    color: var(--brand-color);
+    color: var(--brand);
 
     font-weight: 600;
     font-size: 0.9rem;
@@ -217,7 +216,7 @@ body {
 }
 
 
-/* Header balance */
+/* Header summary */
 
 .header-summary {
     display: flex;
@@ -226,7 +225,7 @@ body {
 
     padding: 12px 18px;
 
-    border-left: 3px solid var(--accent-color);
+    border-left: 3px solid var(--accent);
 }
 
 .header-summary span {
@@ -236,14 +235,14 @@ body {
 }
 
 .header-summary strong {
-    color: var(--accent-color);
+    color: var(--accent);
 
     font-size: 1.4rem;
 }
 
 
 /* =========================================
-   CATEGORY CARDS
+   CATEGORY GRID
    CSS GRID
    ========================================= */
 
@@ -271,9 +270,9 @@ body {
 
     padding: 22px;
 
-    background-color: var(--surface-color);
+    background: var(--surface);
 
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
     border-radius: 14px;
 
     box-shadow: var(--shadow);
@@ -287,24 +286,20 @@ body {
 
 
 /* =========================================
-   CARD HOVER + KEYBOARD FOCUS
+   CARD HOVER AND KEYBOARD FOCUS
    ========================================= */
 
 .category-card:hover,
 .category-card:focus {
     transform: translateY(-4px);
 
-    box-shadow:
-        0 8px 20px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
 
     outline: none;
 }
 
-
-/* Keyboard focus */
-
 .category-card:focus-visible {
-    outline: 3px solid var(--brand-color);
+    outline: 3px solid var(--brand);
     outline-offset: 3px;
 }
 
@@ -324,7 +319,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    background-color: #eff6ff;
+    background: #eff6ff;
 
     border-radius: 12px;
 
@@ -359,7 +354,7 @@ body {
 }
 
 .card-content strong {
-    color: var(--brand-color);
+    color: var(--brand);
 
     font-size: 1.15rem;
 }
@@ -370,13 +365,13 @@ body {
    ========================================= */
 
 .recent-expenses {
-    background-color: var(--surface-color);
+    background: var(--surface);
 
     padding: 25px;
 
     margin-bottom: 30px;
 
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
     border-radius: 14px;
 
     box-shadow: var(--shadow);
@@ -428,21 +423,21 @@ body {
 
     padding: 14px 16px;
 
-    background-color: var(--background-color);
+    background: var(--background);
 
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
 
     border-radius: 8px;
 }
 
 .expense-item span {
-    color: var(--text-primary);
+    color: var(--text);
 
     font-weight: 500;
 }
 
 .expense-item strong {
-    color: var(--brand-color);
+    color: var(--brand);
 }
 
 
@@ -452,13 +447,13 @@ body {
    ========================================= */
 
 .video-section {
-    background-color: var(--surface-color);
+    background: var(--surface);
 
     padding: 25px;
 
     margin-bottom: 30px;
 
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
     border-radius: 14px;
 
     box-shadow: var(--shadow);
@@ -478,6 +473,8 @@ body {
     width: 100%;
     max-width: 560px;
 
+    height: 315px;
+
     margin: 0 auto;
 
     border: none;
@@ -492,13 +489,13 @@ body {
    ========================================= */
 
 .instructions {
-    background-color: var(--surface-color);
+    background: var(--surface);
 
     padding: 25px;
 
     margin-bottom: 30px;
 
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
     border-radius: 14px;
 
     box-shadow: var(--shadow);
@@ -507,7 +504,7 @@ body {
 .instructions summary {
     cursor: pointer;
 
-    color: var(--brand-color);
+    color: var(--brand);
 
     font-weight: 600;
 
@@ -523,12 +520,12 @@ body {
 
 /* =========================================
    RESPONSIVE DESIGN
-   BELOW 768px
+   SINGLE COLUMN BELOW 768px
    ========================================= */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
-    /* Single-column dashboard */
+    /* Main dashboard becomes one column */
 
     .dashboard {
         grid-template-columns: 1fr;
@@ -546,7 +543,7 @@ body {
     }
 
 
-    /* Navigation becomes horizontal */
+    /* Navigation uses Flexbox */
 
     .sidebar-nav {
         flex-direction: row;
@@ -555,7 +552,6 @@ body {
 
     .nav-item {
         flex: 1;
-
         min-width: 120px;
 
         justify-content: center;
@@ -580,14 +576,14 @@ body {
         align-items: flex-start;
 
         border-left: none;
-        border-top: 3px solid var(--accent-color);
+        border-top: 3px solid var(--accent);
 
         padding-left: 0;
         padding-top: 10px;
     }
 
 
-    /* Six cards become one column */
+    /* Category cards become one column */
 
     .categories {
         grid-template-columns: 1fr;
@@ -610,26 +606,23 @@ body {
 @media (prefers-color-scheme: dark) {
 
     :root {
-        --brand-color: #60a5fa;
+        --brand: #60a5fa;
         --brand-dark: #3b82f6;
+        --accent: #4ade80;
 
-        --accent-color: #4ade80;
+        --surface: #1e293b;
+        --background: #0f172a;
 
-        --background-color: #0f172a;
-        --surface-color: #1e293b;
-
-        --text-primary: #f8fafc;
+        --text: #f8fafc;
         --text-secondary: #94a3b8;
 
-        --border-color: #334155;
+        --border: #334155;
+        --sidebar: #020617;
 
-        --sidebar-color: #020617;
-
-        --shadow:
-            0 4px 15px rgba(0, 0, 0, 0.3);
+        --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
     .card-icon {
-        background-color: #1e3a5f;
+        background: #1e3a5f;
     }
 }
