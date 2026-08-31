@@ -1,16 +1,28 @@
 # 💰 SpendWise Dashboard
 
-A responsive financial dashboard shell built as an extension of my Budget Tracker project.
+A responsive personal finance dashboard built as an extension of my Budget Tracker project.
 
-This project was developed for the **Week 4 SpendWise Dashboard Shell (CSS Grid & Flexbox)** challenge. The goal was to rebuild the existing Budget Tracker layout using modern CSS layout techniques while keeping the project static and focused on visual structure.
+This project was developed as part of the **Week 5 Publish and Polish** challenge. The goal this week was to publish the existing SpendWise dashboard using GitHub Pages and add the finishing touches that make the project professional and shareable.
+
+The project remains a **static frontend project** at this stage. JavaScript functionality for adding, calculating, and managing expenses will begin next week.
+
+---
+
+## 🌐 Live Website
+
+The SpendWise Dashboard is published using GitHub Pages:
+
+**https://idleismail70-oss.github.io/personal-budget-tracker/**
+
+The website can be accessed publicly without downloading the project.
 
 ---
 
 ## 📌 Project Overview
 
-SpendWise is a modern dashboard interface for viewing personal financial information.
+SpendWise is a modern dashboard interface designed for viewing personal financial information.
 
-The dashboard includes:
+The dashboard currently includes:
 
 * Sidebar navigation
 * Financial overview header
@@ -19,47 +31,20 @@ The dashboard includes:
 * Recent expenses
 * Budgeting tips video
 * Instructions for using the tracker
+* Responsive layout
+* Dark theme support
+* Custom favicon
+* Page title and Open Graph metadata
 
-The project uses **CSS Grid and Flexbox** to create a clean and responsive dashboard layout.
+The project uses **HTML5 and CSS3**, with CSS Grid and Flexbox providing the main layout structure.
 
-No JavaScript functionality was added because this week's challenge focuses on the visual structure and layout.
-
----
-
-## 🖥️ Dashboard Features
-
-### Sidebar Navigation
-
-The dashboard includes a sidebar with navigation items for:
-
-* Dashboard
-* Expenses
-* Categories
-* Reports
-* Settings
-
-The navigation uses Flexbox to align the icons and text.
-
----
-
-### Financial Overview Header
-
-The header displays:
-
-* Welcome message
-* Financial Overview title
-* Monthly spending description
-* Total balance
-
-Flexbox is used to arrange the header content and balance summary.
+No JavaScript functionality has been added yet because JavaScript development starts in the next week of the course.
 
 ---
 
 ## 💳 Financial Category Cards
 
-The dashboard contains six category cards with realistic static financial information.
-
-### Categories
+The dashboard contains six categories with realistic static financial information:
 
 1. 🍔 Food — `$320.00`
 2. 🚌 Transport — `$180.00`
@@ -68,55 +53,53 @@ The dashboard contains six category cards with realistic static financial inform
 5. 💰 Savings — `$500.00`
 6. 💡 Utilities — `$150.00`
 
-The six cards are arranged using **CSS Grid**.
-
-Flexbox is used inside each card to align the icon and financial information.
+The category cards are arranged using CSS Grid, while Flexbox is used to align the icon and information inside each card.
 
 ---
 
 ## 📊 Recent Expenses
 
-A Recent Expenses section was included to display example financial transactions:
+The dashboard contains example expense information, including:
 
 * Groceries — `$45.00`
 * Bus Fare — `$5.00`
 * Netflix — `$12.00`
 
-The expense items use Flexbox to position the expense name and amount.
+These are currently static examples.
+
+The project does not yet store or calculate expenses because the JavaScript functionality will be introduced next week.
 
 ---
 
-## 🎨 CSS Custom Properties
+## 🎨 Visual Design
 
-The application's theme is controlled using CSS custom properties inside the `:root` selector.
+The dashboard uses a clean financial application design with:
 
-Examples include:
+* Blue as the primary brand color
+* Green as the financial accent color
+* White dashboard surfaces
+* Light gray background
+* Dark navy sidebar
+* Gray secondary text
+* Rounded cards
+* Subtle shadows
+* Consistent spacing
+* Google Fonts
 
-```css
-:root {
-    --brand-color: #2563eb;
-    --accent-color: #16a34a;
-    --background-color: #f1f5f9;
-    --surface-color: #ffffff;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-}
-```
-
-Using CSS variables makes it easier to maintain a consistent visual theme throughout the dashboard.
+The design was developed using CSS custom properties so that the theme can be maintained consistently throughout the application.
 
 ---
 
 ## 🧱 CSS Grid
 
-CSS Grid is used for the overall dashboard layout.
+CSS Grid is used for the main dashboard structure.
 
 The desktop layout contains:
 
-* A fixed-width sidebar
+* A sidebar
 * A flexible main content area
 
-Grid is also used to arrange the six financial category cards into three columns on larger screens.
+Grid is also used to arrange the six financial category cards.
 
 Example:
 
@@ -136,7 +119,7 @@ Example:
 
 ## ↔️ Flexbox
 
-Flexbox is used throughout the interface for smaller layout groups.
+Flexbox is used throughout the dashboard for internal layouts.
 
 It is used for:
 
@@ -148,45 +131,34 @@ It is used for:
 * Card contents
 * Recent expense items
 
-This allows the elements to align naturally without using absolute positioning.
+The project does not use absolute positioning for the main page layout.
 
 ---
 
 ## 📱 Responsive Design
 
-The dashboard is responsive and adapts to smaller screens.
+The dashboard adapts to smaller screen sizes using CSS media queries.
 
-A media query is used below **768px**:
-
-```css
-@media (max-width: 767px) {
-    .dashboard {
-        grid-template-columns: 1fr;
-    }
-
-    .categories {
-        grid-template-columns: 1fr;
-    }
-}
-```
+Below **768px**, the layout changes to a single-column structure.
 
 On smaller screens:
 
-* The dashboard changes to a single-column layout.
-* The sidebar navigation becomes horizontal.
-* The six category cards become one column.
-* The header content stacks vertically.
-* The content receives smaller spacing.
+* The dashboard changes to one column.
+* Sidebar navigation becomes horizontal.
+* Category cards become one column.
+* Header content stacks vertically.
+* Content spacing is reduced.
+* The budgeting video adapts to the smaller screen.
 
-The responsive layout was verified using the browser's **DevTools Device Toolbar**.
+The responsive layout was tested using the browser's **DevTools Device Toolbar**.
 
 ---
 
 ## ✨ Card Micro-interactions
 
-The financial category cards include subtle hover and keyboard focus interactions.
+The category cards include subtle hover and keyboard focus interactions.
 
-The animation lasts **200ms**, which is below the required 250ms maximum.
+The transition lasts **200ms**, which is below the required 250ms maximum.
 
 ```css
 .category-card {
@@ -201,56 +173,108 @@ The animation lasts **200ms**, which is below the required 250ms maximum.
 }
 ```
 
-Keyboard focus is also clearly indicated using `:focus-visible`.
-
-These interactions make the dashboard feel more responsive and user-friendly.
+The cards also include visible keyboard focus states using `:focus-visible`.
 
 ---
 
 ## 🌙 Dark Theme
 
-As a stretch goal, the dashboard supports the user's system dark-mode preference.
+The dashboard supports the user's system dark-mode preference.
 
-The theme is implemented using:
+The dark theme uses:
 
 ```css
 @media (prefers-color-scheme: dark)
 ```
 
-The dark theme overrides the existing CSS custom properties rather than creating a completely separate stylesheet.
+Instead of creating a separate stylesheet, the theme overrides the existing CSS custom properties.
 
-This allows the dashboard to automatically adapt to the user's preferred color scheme.
-
----
-
-## 🚫 No Absolute Positioning
-
-The dashboard does not use absolute positioning for its page layout.
-
-Instead, the project uses:
-
-* CSS Grid for the main structure
-* CSS Grid for the category cards
-* Flexbox for internal component layouts
-
-This makes the layout easier to maintain and responsive across different screen sizes.
+This allows the dashboard to automatically adapt to the user's system appearance preference.
 
 ---
 
-## 🎨 Design Approach
+# 🏷️ Page Title, Favicon & Meta Tags
 
-The dashboard uses a clean and professional financial application style.
+As part of the Week 5 publishing requirements, the project includes a clear page title:
 
-### Main colors
+```html
+<title>SpendWise - Personal Budget Tracker</title>
+```
 
-* **Blue:** Brand and primary interface color
-* **Green:** Financial/accent color
-* **White:** Dashboard surfaces and cards
-* **Light gray:** Page background
-* **Dark navy:** Sidebar
-* **Gray:** Secondary text
+A favicon was also added using the existing project logo:
 
-Rounded corners, subtle shadows, consistent spacing, and clear typography are used to create a modern dashboard appearance.
+```html
+<link rel="icon" type="image/svg+xml" href="budget-icon.svg">
+```
+
+Open Graph meta tags were added to improve how the project can appear when its link is shared on supported platforms.
+
+The metadata includes:
+
+* Open Graph title
+* Open Graph description
+* Open Graph type
+* Open Graph URL
+
+Example:
+
+```html
+<meta property="og:title" content="SpendWise - Personal Budget Tracker">
+<meta property="og:description" content="A clean and responsive personal budget tracker dashboard for managing and viewing expenses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://idleismail70-oss.github.io/personal-budget-tracker/">
+```
+
+---
+
+## 🌐 GitHub Pages
+
+The project was published using **GitHub Pages** from the `main` branch and the root directory.
+
+The deployment makes the SpendWise Dashboard publicly accessible through:
+
+**https://idleismail70-oss.github.io/personal-budget-tracker/**
+
+---
+
+## 🧪 Testing and Feedback
+
+The live website was tested at different screen sizes using the browser's responsive design tools.
+
+Testing focused on:
+
+* Desktop layout
+* Mobile layout
+* Sidebar behavior
+* Category card layout
+* Header responsiveness
+* Text readability
+* General visual appearance
+
+Feedback was also requested from another person to review the dashboard and provide an outside perspective on the design and usability.
+
+### Feedback
+
+The feedback received will be used to identify areas that can be improved as the project continues to develop.
+
+---
+
+## 🚀 What's Coming Next?
+
+The current version focuses on the **visual design and static dashboard structure**.
+
+Starting next week, JavaScript functionality will be introduced.
+
+Planned functionality includes:
+
+* Adding expenses dynamically
+* Calculating totals
+* Updating the dashboard when expenses are added
+* Managing expense data
+* Making the Budget Tracker interactive
+* Improving the overall user experience
+
+The current static dashboard provides the visual foundation for these future features.
 
 ---
 
@@ -264,6 +288,11 @@ Rounded corners, subtle shadows, consistent spacing, and clear typography are us
 * Google Fonts
 * CSS Media Queries
 * Responsive Web Design
+* Git
+* GitHub
+* GitHub Pages
+
+JavaScript functionality has **not been implemented yet** and will begin next week.
 
 ---
 
@@ -280,7 +309,7 @@ personal-Budget-Tracker/
 
 ### `index.html`
 
-Contains the static structure of the SpendWise dashboard, including the sidebar, header, category cards, recent expenses, budgeting tips, and instructions.
+Contains the structure of the SpendWise dashboard, including the sidebar, header, financial category cards, recent expenses, budgeting tips, instructions, page metadata, and favicon.
 
 ### `style.css`
 
@@ -299,42 +328,24 @@ Contains the complete visual design and responsive layout, including:
 
 ### `budget-icon.svg`
 
-The financial dashboard logo used in the SpendWise brand area.
+The logo used as the SpendWise dashboard icon and favicon.
 
 ### `README.md`
 
-Contains documentation explaining the dashboard structure, technologies, layout techniques, responsive behavior, and design decisions.
+Contains documentation explaining the project, technologies, design decisions, publishing process, testing, and future development.
 
 ---
 
-## 🎯 Assignment Requirements
+## 📅 Project Progress
 
-This project addresses the main requirements of the Week 4 challenge.
-
-| Requirement             | Implementation                                           |
-| ----------------------- | -------------------------------------------------------- |
-| Sidebar / Navigation    | SpendWise sidebar                                        |
-| Dashboard Header        | Financial Overview header                                |
-| Six Category Cards      | Food, Transport, Rent, Entertainment, Savings, Utilities |
-| CSS Grid                | Dashboard and category card layout                       |
-| Flexbox                 | Header, sidebar, cards, expense items                    |
-| CSS Custom Properties   | Theme variables in `:root`                               |
-| Responsive Design       | Media query below 768px                                  |
-| DevTools Verification   | Tested using Device Toolbar                              |
-| Card Hover              | 200ms transform and shadow                               |
-| Keyboard Focus          | `:focus` and `:focus-visible`                            |
-| No Absolute Positioning | Grid and Flexbox used instead                            |
-| Dark Theme              | `prefers-color-scheme: dark`                             |
-
----
-
-## 🚀 How to Run the Project
-
-1. Clone or download the repository.
-2. Open the project folder.
-3. Open `index.html` in a web browser.
-4. The SpendWise Dashboard will appear.
-5. Use Chrome DevTools Device Toolbar to test the responsive layout.
+| Week       | Work Completed                                          |
+| ---------- | ------------------------------------------------------- |
+| Week 1     | Initial project setup                                   |
+| Week 2     | Static Budget Tracker structure                         |
+| Week 3     | Visual identity using CSS                               |
+| Week 4     | Dashboard layout using CSS Grid & Flexbox               |
+| **Week 5** | **GitHub Pages, favicon, metadata, README and testing** |
+| Week 6     | JavaScript functionality — planned                      |
 
 ---
 
@@ -342,7 +353,9 @@ This project addresses the main requirements of the Week 4 challenge.
 
 **Ismail Idle**
 
-SpendWise Dashboard — Week 4 CSS Grid & Flexbox Challenge
+SpendWise Dashboard — Personal Budget Tracker
+
+Built as part of my Software Engineering learning journey.
 
 ---
 
