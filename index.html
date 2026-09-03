@@ -18,6 +18,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://idleismail70-oss.github.io/personal-budget-tracker/">
 
+<!-- Bootstrap CSS -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+>
+
+
 <!-- Stylesheet -->
 <link rel="stylesheet" href="style.css">
 
@@ -294,68 +301,115 @@
             </section>
 
 
-            <!-- =========================
-                 RECENT EXPENSES
-                 ========================= -->
+                <!-- EXPENSE TRACKER -->
+<section class="recent-expenses">
 
-            <section class="recent-expenses">
+    <div class="section-heading">
+        <h2>Add Expense</h2>
+        <span>Track your spending</span>
+    </div>
 
-                <div class="section-heading">
+    <!-- EXPENSE FORM -->
+    <form id="expenseForm" class="row g-3">
 
-                    <h2>
-                        Recent Expenses
-                    </h2>
+        <!-- Expense Name -->
+        <div class="col-md-4">
+            <label for="expenseName" class="form-label">
+                Expense Name
+            </label>
 
-                    <span>
-                        August 2026
-                    </span>
+            <input
+                type="text"
+                id="expenseName"
+                class="form-control"
+                placeholder="e.g. Groceries"
+                required
+            >
+        </div>
 
-                </div>
+        <!-- Amount -->
+        <div class="col-md-4">
+            <label for="expenseAmount" class="form-label">
+                Amount
+            </label>
+
+            <input
+                type="number"
+                id="expenseAmount"
+                class="form-control"
+                placeholder="e.g. 45.00"
+                min="0"
+                step="0.01"
+                required
+            >
+        </div>
+
+        <!-- Category -->
+        <div class="col-md-4">
+            <label for="expenseCategory" class="form-label">
+                Category
+            </label>
+
+            <select
+                id="expenseCategory"
+                class="form-select"
+                required
+            >
+                <option value="">Choose category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Housing">Housing</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Savings">Savings</option>
+            </select>
+        </div>
+
+        <!-- Add Button -->
+        <div class="col-12">
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                + Add Expense
+            </button>
+        </div>
+
+    </form>
 
 
-                <div class="expense-list">
+    <!-- EXPENSE TABLE -->
+    <div class="table-responsive mt-4">
 
-                    <div class="expense-item">
+        <table class="table table-hover">
 
-                        <span>
-                            Groceries
-                        </span>
+            <thead>
+                <tr>
+                    <th>Expense</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
 
-                        <strong>
-                            $45.00
-                        </strong>
+            <tbody id="expenseTableBody">
+                <!-- JavaScript will add expenses here -->
+            </tbody>
 
-                    </div>
+        </table>
 
-
-                    <div class="expense-item">
-
-                        <span>
-                            Bus Fare
-                        </span>
-
-                        <strong>
-                            $5.00
-                        </strong>
-
-                    </div>
+    </div>
 
 
-                    <div class="expense-item">
+    <!-- TOTAL -->
+    <div class="mt-3">
+        <strong id="totalExpenses">
+            Total Expenses: $0.00
+        </strong>
+    </div>
 
-                        <span>
-                            Netflix
-                        </span>
+</section>
 
-                        <strong>
-                            $12.00
-                        </strong>
-
-                    </div>
-
-                </div>
-
-            </section>
+            
 
 
             <!-- =========================
@@ -407,6 +461,8 @@
         </main>
 
     </div>
+
+<script type="module" src="./script.js"></script>
 
 </body>
 
